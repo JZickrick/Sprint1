@@ -1,0 +1,51 @@
+body {
+	text-align: center;
+	background-color: AntiqueWhite;
+}
+
+a:link {
+    text-decoration: none;
+    color: black;
+  }
+
+  a:visited {
+    text-decoration: none;
+    color: black;
+  }
+
+  a:hover {
+    text-decoration: underline;
+    color: white;
+  }
+
+table {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+h1 {
+  background-color: CornflowerBlue;
+}
+
+.links {
+	background-color: CornflowerBlue;
+}
+
+.link {
+  
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+}
+
+.cT {
+	border: 3px solid CornflowerBlue;
+	border-collapse: collapse;
+}
+
+.cT td {
+	border: 3px solid CornflowerBlue;
+}
+
+.cBelow {
+	background-color: CornflowerBlue;
+}
