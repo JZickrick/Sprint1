@@ -57,7 +57,7 @@
 			</tr>
 			<tr>
 			<td>
-			<form>
+			<form action=" AccountWebpage.php" method="post">
 			<br>
 			<label for="newEmail">New Email:</label>
 			<input type="text" id="newEmail" name="newEmail"><br><br>
