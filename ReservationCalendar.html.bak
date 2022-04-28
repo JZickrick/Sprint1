@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	    <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<script src="cs/calendar.js"></script>
+        <title>Reservation Calendar</title>
+
+		<!-- Custom style -->
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/calendarStyle.css" />
+
+		<style>
+			table, th, td {
+				border:1px solid black;
+				margin-left: auto;
+				margin-right: auto;
+				table-layout: fixed;
+				text-align: center;
+				width: 50%;
+			}
+			#pageHead{
+				text-align: center;
+			}
+			h2{
+				text-align: center;
+			}
+			#currInfo{
+				text-align: left;
+			}
+		</style>
+	</head>
+	
+	<body onload="renderDate()">
+	
+		<h1 id = "pageHead">
+		Timeshare Website
+		</h1>
+		
+		<table >
+			<tr>
+				<th><a href="AccountWebpage.html">Account</a></th>
+				<th>Email</th>
+				<th><a href="ReservationCalendar.html" id="CurrentPageLink">Reservations</a></th>
+			</tr>
+		</table>
+		
+		<h2>
+		Reservation Calendar
+		</h2>
+		
+		<div class="wrapper">
+			<div class="calendar">
+				<div class="month">
+					<div class="prev" onclick="moveDate('prev')">
+						<span>&#10094;</span>
+					</div>
+					<h2 id="month"></h2>
+					<p id="date_str"></p>
+					<div class="next" onclick="moveDate('next')">
+						<span>&#10095;</span>
+					</div>
+				</div>
+				<div class="weekdays">
+					<div>Sun</div>
+					<div>Mon</div>
+					<div>Tue</div>
+					<div>Wed</div>
+					<div>Thu</div>
+					<div>Fri</div>
+					<div>Sat</div>
+	
+				</div>
+				<div class="days"></div>
+			</div>
+		</div>
+	</body>
+</html>
+	
