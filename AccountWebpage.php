@@ -1,3 +1,5 @@
+<?php
+
 $servername = "localhost";
 $username = "user1";
 $password = "pwd16";
@@ -12,14 +14,15 @@ try {
     $stmt->execute();
 
 	$result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
-	echo $stmt->fetchAll();
-#  }
+	echo $result->fetchAll();
+	echo "it got to here ig";
 }
 catch(PDOException $e) {
     echo "Error: " . $e->getMessage();
 }
+
+echo "that all didn't work eh";
 $conn = null;
 header('Location: diverAdd.html');
-
 
 ?>
