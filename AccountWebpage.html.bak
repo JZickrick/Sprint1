@@ -37,10 +37,10 @@
 			<a href="CreditPage.html">Account</a>
 			</th>
 			<th>
-			<a href="AccountWebpage.html">Email</a>
+			<a href="AccountWebpage.html">Update</a>
 			</th>
 			<th>
-			<a href="Account.html">Reservations</a>
+			<a href="ReservationCalendar.html">Reservations</a>
 			</th>
 		</tr>
 	</table>
@@ -57,7 +57,7 @@
 			</tr>
 			<tr>
 			<td>
-			<form action=" AccountWebpage.php" method="post">
+			<form action="AccountWebpage.php" method="post">
 			<br>
 			<label for="newEmail">New Email:</label>
 			<input type="text" id="newEmail" name="newEmail"><br><br>
