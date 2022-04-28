@@ -28,10 +28,22 @@
 	
 	<body>
 		<?PHP
-		$con = mysql_connect("mscsdb.uwstout.edu:3306", "webbrowse", "MoviesWeb73!");
-		if(!$con){
-			die('Could not conect: ' . mysql_error());
-		}
+
+		$servername = "localhost";
+		$username = "user1";
+		$password = "pwd16";
+		$dbname = "AgileExpG1";
+
+try {
+    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	
+	
+    }
+catch(PDOException $e) {
+    echo "Error: " . $e->getMessage();
+}
+		
 		?>
 	
 	<h1 id = "pageHead">
@@ -74,7 +86,8 @@
 			
 			</td>
 			<td id="currInfo">
-			Current email:<br><br><br>
+			Current email: <?php echo "$result" ?>
+				<br><br><br>
 			</td>
 		</tr>
 		</table>
