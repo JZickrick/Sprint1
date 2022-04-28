@@ -29,20 +29,26 @@
 	<body>
 		<?PHP
 
-		$servername = "http://10.26.0.28:81/";
+		$servername = "localhost";
 		$username = "user1";
 		$password = "pwd16";
 		$dbname = "AgileExpG1";
 
-try {
-    $conn = new PDO("mysqli:host=$servername;dbname=$dbname", $username, $password);
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-	
-	
-    }
-catch(PDOException $e) {
-    echo "Error: " . $e->getMessage();
-}
+		try {
+			$conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+			$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+			$stmt = $conn->prepare("SELECT * FROM Resort;");
+			$stmt->execute();
+
+			// set the resulting array to associative
+			$result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+			foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) {
+				echo $v;
+			}
+		}
+		catch(PDOException $e) {
+			echo "Error: " . $e->getMessage();
+		}
 		
 		?>
 	
