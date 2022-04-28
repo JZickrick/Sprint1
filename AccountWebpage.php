@@ -1,8 +1,10 @@
 <html lang="en">
 	<body>
-
-		<?php
-		echo $_POST["newEmail"];
+		<?PHP
+		if(isset($_POST['submit'])){
+        $user_newEmail = $_POST['newemail'];
+        echo $user_newEmail;
+		}
 		?>
 	</body>
 </html>

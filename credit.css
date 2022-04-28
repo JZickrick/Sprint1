@@ -1,3 +1,7 @@
+#logo {
+	float: left;
+}
+
 body {
 	text-align: center;
 	background-color: AntiqueWhite;
@@ -25,6 +29,7 @@ table {
 
 h1 {
   background-color: CornflowerBlue;
+  margin-right: 310px;
 }
 
 .links {
@@ -48,4 +53,26 @@ h1 {
 
 .cBelow {
 	background-color: CornflowerBlue;
+}
+
+.expire {
+	background-color: CornflowerBlue;
+	text-align: left;
+}
+
+.e0 {
+	padding-right: 79px;
+}
+
+.e1 {
+	background-color: AntiqueWhite;
+}
+
+.e2 {
+	padding-right: 79px;
+}
+
+img {
+	width: 15%;
+	border-radius: 50%;
 }
