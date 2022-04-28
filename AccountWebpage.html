@@ -74,7 +74,18 @@
 			
 			</td>
 			<td id="currInfo">
-			Current email:<br><br><br>
+			Current email:<br>
+			<div id="currentEmail"></div>
+			<script>
+				$.ajax({
+					method: "POST",
+					url: "AccoutnWebpage.php"
+				}).done(function ( response ) {
+					$("div.currentEmail").html(response);
+				});
+			</script>
+			
+			<br><br>
 			Current address:
 			</td>
 		</tr>
