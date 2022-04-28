@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<meta name="description" content="">
 		<meta name="author" content="">
-		<script src="cs/calendar.js"></script>
+		<script src="js/calendar.js"></script>
         <title>Reservation Calendar</title>
 
 		<!-- Custom style -->
