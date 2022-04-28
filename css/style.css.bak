@@ -1,0 +1,19 @@
+table a#CurrentPageLink {
+    color: DarkBlue;
+}
+
+table a:link {
+    color: Blue;
+}
+
+table a:hover {
+    background-color: CornflowerBlue;
+}
+
+table a:visited {
+    color: Blue;
+}
+
+table a:active {
+    color: DeepSkyBlue;
+}
