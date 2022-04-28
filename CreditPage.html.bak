@@ -17,7 +17,7 @@
 		<tr>
 			<th><a href="CreditPage.html">Account</a></th>
 				<th><a href="AccountWebpage.html">Update</a></th>
-				<!--<th><a href="ReservationCalendar.html">Reservations</a></th>-->
+				<th><a href="ReservationCalendar.html" id="CurrentPageLink">Reservations</a></th>
 		</tr>
 	</table>
 	
