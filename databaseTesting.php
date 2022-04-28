@@ -29,13 +29,13 @@
 	<body>
 		<?PHP
 
-		$servername = "localhost";
+		$servername = "http://10.26.0.28:81/";
 		$username = "user1";
 		$password = "pwd16";
 		$dbname = "AgileExpG1";
 
 try {
-    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+    $conn = new PDO("mysqli:host=$servername;dbname=$dbname", $username, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	
 	
