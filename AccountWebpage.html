@@ -83,10 +83,7 @@
 					Current email:<br>
 					<p class="currentEmail"></p>
 					<script>
-						$.ajax({
-							methdo: "POST",
-							url: "AccountWebpage.php"
-						})
+						$.ajax("AccountWebpage.php")
 							.done(function (response) {
 								$("p.currentEmail").html(response);
 							});
@@ -94,6 +91,14 @@
 
 					<br><br>
 					Current address:
+					<p class="currentAddress"></p>
+					
+					<script>
+						$.ajax("AccountWebpage.php")
+							.done(function (response) {
+								$("p.currentAddress").html(response);
+							});
+					</script>
 				</td>
 			</tr>
 		</table>
