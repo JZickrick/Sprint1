@@ -80,21 +80,21 @@
 
 				</td>
 				<td id="currInfo">
-					Current email:<br>
-					<p class="currentEmail"></p>
+					Current Name:<br>
+					<p class="currentName"></p>
 					<script>
-						$.ajax("AccountWebpage.php")
+						$.ajax("getName.php")
 							.done(function (response) {
 								$("p.currentEmail").html(response);
 							});
 					</script>
 
 					<br><br>
-					Current address:
-					<p class="currentAddress"></p>
+					Current email:
+					<p class="currentEmail"></p>
 					
 					<script>
-						$.ajax("AccountWebpage.php")
+						$.ajax("getEmail.php")
 							.done(function (response) {
 								$("p.currentAddress").html(response);
 							});
