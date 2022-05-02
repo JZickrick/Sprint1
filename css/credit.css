@@ -27,19 +27,9 @@ table {
 	margin-right: auto;
 }
 
-h1 {
-  background-color: CornflowerBlue;
-  margin-right: 310px;
-}
-
 .links {
 	background-color: CornflowerBlue;
-}
-
-.link {
-  
-  border-right: 1px solid black;
-  border-left: 1px solid black;
+	width: 25%;
 }
 
 .cT {
@@ -49,6 +39,15 @@ h1 {
 
 .cT td {
 	border: 3px solid CornflowerBlue;
+}
+
+.cTN {
+	border: 3px solid CornflowerBlue;
+	width: 25%;
+}
+
+.c {
+	background-color: white;
 }
 
 .cBelow {
@@ -65,7 +64,7 @@ h1 {
 }
 
 .e1 {
-	background-color: AntiqueWhite;
+
 }
 
 .e2 {
@@ -73,6 +72,28 @@ h1 {
 }
 
 img {
-	width: 15%;
-	border-radius: 50%;
+	width: 25%;
 }
+
+#pageHead {
+	text-align: center;
+}
+
+h2 {
+	text-align: center;
+}
+
+#currInfo {
+	text-align: left;
+}
+
+table,
+		th,
+		td {
+
+			margin-left: auto;
+			margin-right: auto;
+			table-layout: fixed;
+			text-align: center;
+			
+		}

@@ -3,41 +3,27 @@
 <head>
 	<meta charset="utf-8">
 	<title>Account Details</title>
-
+	
+	<link href="css/credit.css" type="text/css" rel="stylesheet" />
+	
 	<style>
-		table,
-		th,
-		td {
-			border: 1px solid black;
-			margin-left: auto;
-			margin-right: auto;
-			table-layout: fixed;
-			text-align: center;
-			width: 50%;
+		body {
+		  background-image: url('hotel.jpeg');
 		}
-
-		#pageHead {
-			text-align: center;
-		}
-
-		h2 {
-			text-align: center;
-		}
-
-		#currInfo {
-			text-align: left;
-		}
+		
 	</style>
 </head>
 
 <body>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-	<h1 id="pageHead">
+	
+	<img src="Logo.png" alt="Logo">
+	
+	<!--<h1 id="pageHead">
 		Timeshare Website
-	</h1>
+	</h1>-->
 
-	<table>
+	<table class="links">
 		<tr>
 			<th>
 				<a href="CreditPage.html">Account</a>
@@ -45,31 +31,25 @@
 			<th>
 				<a href="AccountWebpage.html">Update</a>
 			</th>
-<<<<<<< HEAD
 			<th>
 				<a href="ReservationCalendar.html">Reservations</a>
 			</th>
-=======
-			<!-- <th>
-			<a href="ReservationCalendar.html">Reservations</a>
-			</th> -->
->>>>>>> 57c628030362672847541e93d0d2659479fcbcf0
 		</tr>
 	</table>
 
-	<h2>
+	<h2 class="c">
 		Update Account Details
 	</h2>
 
 	<h3>
-		<table>
-			<tr>
+		<table class="cTN">
+			<tr class="c">
 				<th>Update Information</th>
 				<th>Current Information</th>
 			</tr>
-			<tr>
+			<tr class="cBelow">
 				<td>
-					<form action="AccountWebpage.php" method="post">
+					<form method="post">
 						<br>
 						<label for="newEmail">New Email:</label>
 						<input type="text" id="newEmail" name="newEmail"><br><br>
@@ -86,26 +66,32 @@
 
 				</td>
 				<td id="currInfo">
-					Current email:<br>
-					<p class="currentEmail"></p>
+					Current Name:<br>
+					<p class="currentName"></p>
 					<script>
-						$.ajax({
-							method: "POST",
-							url: "AccountWebpage.php"
-						}).done(function (response) {
-							$("p.currentEmail").html(response);
-						});
+						$.ajax("getName.php")
+							.done(function (response) {
+								$("p.currentName").html(response);
+							});
 					</script>
 
 					<br><br>
-					Current address:
+					Current email:
+					<p class="currentEmail"></p>
+					
+					<script>
+						$.ajax("getEmail.php")
+							.done(function (response) {
+								$("p.currentEmail").html(response);
+							});
+					</script>
 				</td>
 			</tr>
 		</table>
 
 		<center>
 			<br>
-			<input type="submit" value="Submit">
+			<input type="submit" value="Submit" method="post">
 		</center>
 		</form>
 </body>
